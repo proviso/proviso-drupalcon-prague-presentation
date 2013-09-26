@@ -60,6 +60,11 @@
               - [@patconnolly](http://twitter.com/patconnolly) on twitter
           </script>
 				</section>
+				<section data-background="black">
+					<video widht="100%">
+					  <source src="assets/terminator-clip.mp4" type="video/mp4">
+					</video>
+				</section>
 				<section data-background="assets/InTheBeginningLIGHT.jpg">
 					<h1 class="white">In the beginning</h1>
 				</section>
@@ -98,6 +103,14 @@
 					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
 					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
 				]
+			});
+			Reveal.addEventListener( 'slidechanged', function( event ) {
+				try {
+					event.currentSlide.firstElementChild.play();
+				}
+				catch (e) {
+					return;
+				}
 			});
 
 		</script>
