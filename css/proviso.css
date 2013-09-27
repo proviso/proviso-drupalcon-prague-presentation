@@ -1,0 +1,7 @@
+.reveal h1.white, .reveal h2.white, .reveal h3.white, .reveal h4.white {
+  color: white;
+}
+.reveal section img.borderless {
+  border: none;
+  box-shadow: none;
+}

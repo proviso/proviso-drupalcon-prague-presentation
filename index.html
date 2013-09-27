@@ -1,0 +1,803 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Proviso - Vagrant based development standardized!</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/beige.css" id="theme">
+		<link rel="stylesheet" href="css/proviso.css">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<section data-background="assets/first-slide.png">
+					</section>
+					<section>
+						<h1>Proviso</h1>
+						<h3>VAGRANT BASED DEVELOPMENT STANDARDIZED!</h3>
+						<p>
+							<small>Created by <a href="http://twitter.com/tizzo">Howard Tyson</a> / <a href="http://twitter.com/hakimel">Pat Connolly</a></small>
+						</p>
+					</section>
+					<section data-markdown>
+	          <script type="text/template">
+	            ## Patrick Connolly
+	              - [patcon](https://drupal.org/user/388787) on Drupal.org
+	              - [@patconnolly](http://twitter.com/patconnolly) on twitter
+	              - DevOps Extraordinaire at [MyPlanetDigital](http://www.myplanetdigital.com/)
+	          </script>
+					</section>
+	        <section data-markdown>
+	          <script type="text/template">
+	            ## Howard Tyson
+	              - [tizzo](https://drupal.org/user/168251) on Drupal.org
+	              - [@tizzo](http://twitter.com/tizzo) on twitter
+	              - VP of Engineering at [Zivtech](http://zivtech.com)
+	          </script>
+					</section>
+				</section><!-- Intro -->
+				<section><!-- History -->
+					<section data-background="assets/InTheBeginningLIGHT.jpg">
+						<h1 class="white">In the beginning</h1>
+					</section>
+					<section data-background="assets/2001-monolith.jpg">
+						<h1 class="white">Local development was hard</h1>
+					</section>
+					<section  data-background="assets/2001-monolith.jpg">
+						<h2 class="white">You probably had to install Apache yourself...</h2>
+						<h2 class="white fragment">...on Windows...</h2>
+						<h2 class="white fragment">...so you just didn't</h2>
+						<aside class="notes">
+							You'd just say "hey man", I'll FTP to the server and...
+						</aside>
+					</section>
+					<section data-background="black">
+						<video width="100%">
+						  <source src="assets/DO-IT-LIVE.mp4" type="video/mp4">
+						</video>
+						<aside>
+						</aside>
+					</section>
+					<section data-background="assets/2001-monkey-tool.jpg">
+						<h1 class="white">And then we built tools</h1>
+					</section>
+					<section data-background="assets/2001-monkey-tool.jpg">
+						<ul>
+							<li class="fragment"><h3 class="white">MAMP</h3></li>
+							<li class="fragment"><h3 class="white">WAMP</h3></li>
+							<li class="fragment"><h3 class="white">XAMPP</h3></li>
+						</ul>
+					</section>
+					<section>
+						<p> And it worked...</p>
+						<p class="fragment">...on my machine</p>
+					</section>
+					<section>
+						<h2>And you had Drupal running locally!</h2>
+						<h3 class="fragment">...but was...</h3>
+						<ul>
+							<li class="fragment">solr?</li>
+							<li class="fragment">memcache?</li>
+							<li class="fragment">varnish?</li>
+							<li class="fragment">redis?</li>
+							<li class="fragment">ssl?</li>
+							<li class="fragment">selenium?</li>
+						</ul>
+					</section>
+					<section data-background="assets/2001-spaceman.jpg">
+						<h1 class="white">Then there was Vagrant</h1>
+						<h2 class="fragment">welcome to the future</h2>
+					</section>
+					<section>
+						<img class="borderless" src="assets/vagrant-logo.png" height="300px" />
+						<h2>Create virtual machines on any environment</h2>
+					</section>
+					<section>
+						<img class="borderless" src="assets/vagrant-logo.png" height="300px" />
+						<h2>Provision</h3>
+						<div class="fragment">
+							<p>
+								<img class="borderless" src="assets/puppet-logo.png" height="100px"/>
+								<img class="borderless" src="assets/chef-logo.png" height="100px"/>
+								<img class="borderless" src="assets/ansible-logo.png" height="100px"/>
+								<img class="borderless" src="assets/salt-logo.png" height="100px"/>
+							</p>
+
+						</div>
+					</section>
+					<section>
+						<h2>The Rise of the Machines</h2>
+						<p class="fragment">run `<code>vagrant up</code>` and...</p>
+					</section>
+					<section>
+						<iframe src="http://showterm.io/cf99991195fea77cb6568#fast" width="640" height="480"></iframe>
+					</section>
+					<section data-background="black">
+						<video width="100%">
+						  <source src="assets/terminator-clip.mp4" type="video/mp4">
+						</video>
+					</section>
+					<section>
+						<h1>OH GOD!<h1>
+						<h3 class="fragment"> THERE ARE SO MANY!</h3>
+					</section>
+					<section data-transition="zoom">
+						<h1>Drupal Vagrant</h1>
+					</section>
+					<section data-transition="zoom">
+						<h1>Oscar</h1>
+					</section>
+					<section data-transition="zoom">
+						<h1>Ariadne</h1>
+					</section>
+					<section data-transition="zoom">
+						<h1>Oscar</h1>
+					</section>
+					<section data-transition="zoom">
+						<h1>Quickstart</h1>
+					</section>
+					<section data-transition="zoom">
+						<h1>DrupalPro</h1>
+					</section>
+					<section data-transition="zoom">
+						<h1>Aegir-Up</h1>
+					</section>
+					<section data-transition="zoom">
+						<h1>Devshop</h1>
+					</section>
+					<section data-transition="zoom">
+						<h1>Drupal Lamp</h1>
+					</section>
+					<section data-transition="zoom">
+						<h1>Vagrant Dev VM</h1>
+					</section>
+					<section data-background="assets/reinventing-the-wheel.jpg">
+						<h1 class="white">We've all been reinventing the wheel</h1>
+					</section>
+					<section data-background="assets/2001-baby.jpg">
+						<h1 class="white">Until now</h1>
+						<h2 class="fragment roll-in white">Proviso is born</h2>
+					</section>
+				</section> <!-- /History -->
+				<section><!-- Proviso - What? -->
+					<section data-background="assets/proviso-dynamicon.png">
+						<h1>What is Proviso?</h1>
+					</section>
+					<section data-background="assets/borg-cube.jpg">
+						<h1 class="white">A Community Project To Assimilate Them All</h1>
+						<h2 class="white fragment">Resistance is Futile</h2>
+					</section>
+
+					<section>
+						<h1>1. A Community</h1>
+					</section>
+					<section>
+						<h2>But don't we have a community?</h2>
+						<h3 class="fragment">Conversing not converging</h3>
+						<ul>
+							<li class="fragment">http://groups.drupal.org/high-performance</li>
+							<li class="fragment">http://groups.drupal.org/devops</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Proviso is code as conversation</h2>
+						<h3 class="fragment">Converging on best practices</h3>
+						<ul>
+							<li class="fragment">How do we lock down a box?</li>
+							<li class="fragment">Can we turn that into runnable code instead of a checklist?</li>
+						</ul>
+					</section>
+					<section>
+						<h1>2. An Initiative</h1>
+					</section>
+					<section>
+						<img class="fragment borderless" data-fragment-index="1" src="assets/carebear.png" />
+						<h2>Working to find the best ways to share</h2>
+						<h3 class="fragment" data-fragment-index="1">(because sharing is caring)<h3>
+					</section>
+					<section>
+						<h1>3. A Vagrant Project</h1>
+					</section>
+					<section>
+						<h2>Need a development environment?</h2>
+						<h3>Use ours!</h3>
+					</section>
+					<section>
+						<h1>4. Accessible</h1>
+					</section>
+					<section>
+						<h2>The Kalamuna team is planning to integrate the Kalabox front end</h2>
+					</section>
+					<section>
+						<img src="assets/kalabox-panel-01.png" />
+					</section>
+					<section>
+						<img src="assets/kalabox-panel-02.png" />
+					</section>
+					<section>
+						<img src="assets/kalabox-panel-03.png" />
+					</section>
+					<section>
+						<img src="assets/kalabox-panel-04.png" />
+					</section>
+					<section>
+						<img src="assets/kalabox-panel-05.png" />
+					</section>
+					<section>
+						<img src="assets/kalabox-panel-06.png" />
+					</section>
+					<section>
+						<h1>5. Composable</h1>
+					</section>
+					<section>
+						<h2>Assemble your pieces</h2>
+						<h3 class="fragment">Pick from Provisioners</h3>
+						<h3 class="fragment">Pick from service packages</h3>
+					</section>
+				</section><!-- /Proviso - What? -->
+				<section><!-- Proviso - How? -->
+					<section data-background="assets/proviso-dynamicon.png">
+						<h1>But How?</h1>
+					</section>
+					<section>
+						<h2>Multi-vendor</h2>
+						<img class="borderless" src="assets/dual-vendor.png" />
+						<h3 class="fragment">Starting conversations...</h3>
+					</section>
+					<section>
+						<h3>Can we be the TODO MVC of Config Management?</h2>
+						<img src="assets/todo-mvc.png" class="borderless" />
+					</section>
+					<section>
+						<h1>Built on the shoulders of giants</h1>
+					</section>
+					<section>
+						<h2>Upstream</h2>
+						<h3 class="fragment">Using exclusively community modules and cookbooks</h3>
+						<h3 class="fragment">Releases pinned with Librarian</h3>
+						<h3 class="fragment">Plugins pinned with Bindler</h3>
+					</section>
+					<section>
+						<h1>Automated Testing from Day One</h1>
+					</section>
+					<section>
+						<img class="borderless" src="assets/travis-ci.png" width="50%" />
+						<h4>Test Kitchen</h4>
+						<h4>Travis CI</h4>
+						<h4>+ Amazon</h4>
+						<hr/>
+						<h3>Cross-platform CI Testing</h3>
+					</section>
+					<section>
+						<h1>Composability</h1>
+					</section>
+					<section>
+						<h2>Ship with near parity for PaaS providers (Acquia, Pantheon, etc)</h4>
+					</section>
+					<section>
+						<h2>YAML component lists</h4>
+					</section>
+					<section>
+						<h2>Room to add your own components</h4>
+					</section>
+				</section><!-- /Proviso - How? -->
+    <section data-background="http://www.destinationsuccess.ca/images/imagine%20lrg%20button.jpg">
+    </section>
+    <section>
+			<video width="60%">
+			  <source src="assets/Danger-Will-Robinson.mp4" type="video/mp4">
+			</video>
+    	<h2>Caution, even more hand waiving!</h2>
+		</section>
+    <section>
+      <section>
+	      <h2>Scenario 1:</h2>
+	      <h2>Platform Fluidity</h2>
+      </section>
+            <section>
+                <h2>
+                    So you've been<br>preparing to host<br>ubuntu 12.04</h2>
+                </section>
+                <section>
+                    <h2>
+                        <br>
+                        <br>
+                        <br>
+                        <span style="font-size: 75.96px;">Halfway through project,</span>
+                        <br>
+                        <font style="font-size: 112px;">client says</font>
+                    </h2>
+                </section>
+                <section>
+                    <h2>
+                        <font style="font-size: 72px;">
+                            <br>
+                            <br>"We hear that linus endorses<br>
+                        </font>
+                        <span style="font-size: 72px;">redhat linux 5.2.<br>
+                        </span>
+                        <font style="font-size: 112px;">Can we do that?</font>
+                    </h2>
+                </section>
+                <section>
+                    <h2>
+                        <br>
+                        <br>
+                        <br>
+                        <br>This is not true.<br>
+                    </h2>
+                </section>
+                <section>
+                    <h2>
+                        <br>
+                        <br>
+                        <br>
+                        <br>HOWEVER...</h2>
+                    </section>
+                    <section>
+                        <h2>
+                            <br>
+                            <br>
+                            <br>Client is<br>
+                            <font style="font-size: 112px;">enterprise.</font>
+                        </h2>
+                    </section>
+                    <section>
+                        <h2>
+                            <br>
+                            <br>
+                            <br>
+                            <span style="font-size: 75.96px;">in other words</span>
+                            <br>
+                            <font style="font-size: 112px;">it is true.</font>
+                            <br>
+                        </h2>
+                    </section>
+                    <section>
+                        <h2>
+                            <font style="font-size: 42px;">
+                                <br>
+                                <br>with Proviso</font>
+                                <br>we can see which platforms<br>are supported and tested<br>
+                                <font style="font-size: 112px;">at a glance</font>
+                            </h2>
+                        </section>
+                        <section>
+                            <h2>
+                                <br>
+                                <br>
+                                <br>What makes this<br>
+                                <font style="font-size: 112px;">possible?</font>
+                            </h2>
+                        </section>
+                        <section>
+                            <h2>
+                                <br>
+                                <br>
+                                <br>
+                                <span style="font-size: 75.96px;">stack based on</span>
+                                <br>robust community cookbooks</h2>
+                            </section>
+                            <section>
+                                <h2>
+                                    <br>
+                                    <br>
+                                    <br>infrastructure testing<br>with travis ci&nbsp;on<br>multiple supported platforms</h2>
+                                </section>
+                            </section>
+                            <section>
+                                <section>
+                                    <h2>
+                                        <span style="font-size: 75.96px;">
+                                            <br>
+                                            <br>
+                                            <br>
+                                        </span>
+                                        <span>Scenario 2:<br>
+                                        </span>
+                                        <span>Imprecise Stack versioning:</span>
+                                    </h2>
+<div>
+                                    <br>
+                                </div>
+<div>
+                                <br>
+                            </div>
+<div>
+                            <font style="font-size: 54px;">
+                                <br>
+                            </font>
+                        </div>
+<div>
+                        <br>
+                    </div>
+                </section>
+                <section>
+                    <h2>
+                        <br>MYSQL<br>
+                        <br>
+                        <br>
+                        <div style="text-align: center;">
+                            <span style="font-size: 75.96px;">Acquia running 5.5.34</span>
+                        </div>
+                    </h2>
+                    <h2 style="text-align: center;">I'm running 5.5.32</h2>
+                </section>
+                <section>
+                    <font style="font-size: 112px; position: absolute; width: 32px; height: 111px; z-index: 4; left: 537px; top: 36px;" class="absolute-element">&nbsp;</font>
+                    <h2 style="max-height: none; max-width: none; position: absolute; width: 180px; height: 111px; z-index: 4; left: 399px; top: 245px;" class="absolute-element">
+                            <font>Meh?</font>
+                    </h2>
+                </section>
+                <section>
+                    <h2>It's all 5.5</h2>
+<div>
+<img src="http://2.bp.blogspot.com/-j9qFADyajAA/URxVm3YdSzI/AAAAAAAAJ0Q/C-IYl6zXnAo/s1600/AMIRITE.jpg" style="width: 710.2529442924387px; height: 538.4814966668695px; max-height: none; max-width: none;">
+                    <br>
+</div>
+                </section>
+                <section>
+                    <h1 class="absolute-element" style="position: absolute; width: 119px; height: 124px; z-index: 4; left: 426px; top: 225px;">
+                        <font style="font-size: 112px;">No.</font>
+                    </h1>
+                </section>
+                <section>
+                    <h2>Patch release #33 changelog</h2>
+<h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/patcon/images/101348/mysql-release-log.png" style="width: 462.4188429099501px; height: 1598.8558601604063px; max-height: none; max-width: none;">
+                    <br>
+</h2>
+                </section>
+                <section>
+                    <h2>Patch Release #33 Changelog</h2>
+<img src="https://s3.amazonaws.com/media-p.slid.es/uploads/patcon/images/101349/mysql-release-log.png">
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h2>
+                        <br>
+                        <br>
+                        <br>Scenario 3:<br>Issue queue helpers</h2>
+                    </section>
+                    <section>
+                        <h2>
+                            <br>
+                            <br>
+                            <br>
+                            <br>Can a standard tool&nbsp;help us<br>file better support issues?</h2>
+                        </section>
+                        <section>
+                            <h2>
+                                <br>
+                            </h2>
+                            <h2>
+                                <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/patcon/images/101362/site-broken.png">
+                                <br>
+                            </h2>
+                        </section>
+                        <section>
+                            <h2 style="max-height: none; max-width: none; position: absolute; width: 749px; height: 68px; z-index: 4; left: 109px; top: 194px;" class="absolute-element">patient Maintainer sally says:</h2>
+                            <div>
+                                <br>
+                            </div>
+                            <div class="absolute-element" style="position: absolute; width: 622px; height: 46px; z-index: 4; left: 173px; top: 346px;">"Can you reproduce that with Proviso?"</div>
+                        </section>
+                        <section>
+                            <h2>current approach</h2>
+                            <div style="text-align: left; " class="fragment">
+                                <span>
+                                    <br>
+                                </span>
+                            </div>
+                            <div style="text-align: left; " class="fragment">
+                                <ol>
+                                    <ol>
+                                        <li>Install Proviso</li>
+                                        <li>Run this:<br>
+                                            <span>vagrant up<br>
+                                            </span>
+                                            <span>vagrant ssh<br>
+                                            </span>
+                                            <span>drush quick-drupal bug-test views<br>
+                                            </span>
+                                            <span>drush vset foo bar</span>
+                                        </li>
+                                    </ol>
+                                </ol>
+                            </div>
+                        </section>
+                        <section>
+                            <h2>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                            </h2>
+                            <h2>Potential future approachES...</h2>
+                            <div>
+                                <span style="text-align: left;">
+                                    <br>
+                                </span>
+                            </div>
+                            <div>
+                                <span style="text-align: left;">
+                                    <br>
+                                </span>
+                            </div>
+                            <div>
+                                <span style="text-align: left;">
+                                    <br>
+                                </span>
+                            </div>
+                            <div>
+                                <br>
+                            </div>
+                            <div style="text-align: left; ">
+                                <br>
+                            </div>
+                            <div style="text-align: left; ">
+                                <br>
+                            </div>
+                        </section>
+                        <section>
+                            <h2>
+                                <br>
+                                <br>
+                                <br>Vagrant plugins&nbsp;<span style="font-size: 75.96px;">that<br>drive drush&nbsp;inside ouR vm's<br>for&nbsp;common community tasks</span>
+                            </h2>
+                        </section>
+                        <section>
+                            <h2>
+                                <br>
+                                <br>
+                                <br>
+                                <br>Standardized Bug reports</h2>
+                                <div style="text-align: left; ">
+                                    <br>
+                                </div>
+                            </section>
+                            <section>
+                                <h2>
+                                    <br>
+                                    <br>
+                                </h2>
+                                <div>
+                                    <br>
+                                </div>
+                                <div style="text-align: left; ">vagrant proviso project-test views<br>vagrant ssh -c "drush vset foo bar"<br>
+                                    <br>
+                                    <br>
+                                    <div style="text-align: center;">
+                                        <span>(Like a standard, local, ssh-able simplytest.me)</span>
+                                    </div>
+                                </div>
+                            </section>
+                            <section>
+                                <h2>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>Easy patch testing</h2>
+                                </section>
+                                <section>
+                                    <h2>
+                                        <img src="https://s3.amazonaws.com/media-p.slid.es/uploads/patcon/images/101439/patch-testing.jpg">
+                                        <br>
+                                    </h2>
+                                </section>
+                                <section>
+                                    <h2>
+                                        <br>
+                                        <br>
+                                    </h2>
+                                    <div>
+                                        <font style="font-size: 24px;">`vagrant proviso patch-test&nbsp;https://drupal.org/files/oauth-2027863-7.patch`</font>
+                                    </div>
+                                    <div>
+                                        <font style="font-size: 24px;">
+                                            <br>
+                                        </font>
+                                    </div>
+                                    <div>
+                                        <ol>
+                                            <li>
+                                                <font size="5">Opens page of issue number.</font>
+                                            </li>
+                                            <li>
+                                                <font size="5">Scrape for module and core version.</font>
+                                            </li>
+                                            <li>
+                                                <font size="5">Determines module dependencies.</font>
+                                            </li>
+                                            <li>
+                                                <font size="5">
+                                                    <span>Find date of comment with this patch.</span>
+                                                </font>
+                                            </li>
+                                            <li>
+                                                <font size="5">
+                                                    <span>Checkout HEAD commit from that date.</span>
+                                                </font>
+                                            </li>
+                                            <li>
+                                                <font size="5">
+                                                    <span>Apply patch.</span>
+                                                </font>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </section>
+                            </section>
+                            <section>
+                                <section>
+                                    <h2>
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <span style="font-size: 75.96px;">Scenario 4:</span>
+                                        <br>Remote Deployment</h2>
+                                    </section>
+                                    <section>
+                                        <h2>
+                                            <br>
+                                            <br>You've been<br>working locally<br>
+                                            <font style="font-size: 112px;">with proviso</font>
+                                        </h2>
+                                    </section>
+                                    <section>
+                                        <h2>
+                                            <br>
+                                            <br>
+                                            <br>Original Plan:<br>
+                                            <font style="font-size: 112px;">host on a paas</font>
+                                        </h2>
+                                    </section>
+                                    <section>
+                                        <h2>
+                                            <font style="font-size: 42px;">
+                                                <br>
+                                                <br>
+                                                <br>But then</font>
+                                            </h2>
+                                            <h2>you realize...</h2>
+                                        </section>
+                                        <section>
+                                            <h2>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <font style="font-size: 72px;">Mongodb &amp; node.js</font>
+                                                <br>
+                                                <font style="font-size: 42px;">are</font>
+                                                <br>
+                                                <font style="font-size: 112px;">freaking sweet.</font>
+                                            </h2>
+                                        </section>
+                                        <section>
+                                            <h2>
+                                                <br>
+                                                <br>
+                                                <span style="font-size: 75.96px;">
+                                                    <br>Paas hosts like</span>
+                                                    <br>pantheon &amp; acquia<br>don't support niche stacks.</h2>
+                                                </section>
+                                                <section>
+                                                    <h2>
+                                                        <br>extend proviso<br>
+                                                        <font>
+                                                            <span style="font-size: 42px;">&amp;</span>
+                                                        </font>
+                                                    </h2>
+                                                    <h2>
+                                                        <font>
+                                                            <font>
+                                                                <font style="font-size: 112px;">deploy remotely</font>
+                                                                <br>
+                                                                <font style="font-size: 42px;">with</font>
+                                                            </font>
+                                                        </font>
+                                                    </h2>
+                                                    <h2>
+                                                        <font>
+                                                            <font>
+                                                                <span style="font-size: 72px;">vagrant-aws</span>
+                                                            </font>
+                                                        </font>
+                                                    </h2>
+                                                </section>
+                                            </section>
+
+
+				<section> <!-- Closing -->
+					<section>
+						<h1>Questions?</h1>
+					</section>
+					<section>
+						<img width="290px" src="assets/i-want-you.jpg"/>
+						<h1>We Want You!</h1>
+						<h3>For Proviso Contributor!</h3>
+					</section>
+					<section>
+						<h2>Join us on:</h2>
+						<ul>
+							<li>GitHub! http://github.com/proviso/proviso</li>
+							<li>IRC! #proviso</li>
+							<li>Google Groups! http://groups.google.com/proviso</li>
+						</ul>
+					</section>
+					<section data-background="assets/final-slide.png">
+					</section>
+				</section> <!-- /Closing -->
+
+			</div><!-- /slides -->
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+			Reveal.addEventListener( 'slidechanged', function( event ) {
+				try {
+					event.currentSlide.firstElementChild.play();
+				}
+				catch (e) {
+					return;
+				}
+			});
+
+		</script>
+
+	</body>
+</html>
