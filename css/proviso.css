@@ -5,3 +5,9 @@
   border: none;
   box-shadow: none;
 }
+.reveal h1.black-glow {
+  text-shadow: -1px 1px 8px #000, 8px -1px 20px #000 !important;
+}
+.reveal h2.white-glow {
+  text-shadow: -1px 1px 8px #ffc, 8px -1px 7px #fff !important;
+}
